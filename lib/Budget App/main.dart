@@ -1,3 +1,5 @@
+import 'package:adv_flutter_ch_3/Budget%20App/screens/auth/login_page.dart';
+import 'package:adv_flutter_ch_3/Budget%20App/screens/auth/sign_up_page.dart';
 import 'package:adv_flutter_ch_3/Budget%20App/screens/bottom%20navigation%20bar/bottom_navigation_bar.dart';
 import 'package:adv_flutter_ch_3/Budget%20App/screens/flash%20screen/flash_screen.dart';
 import 'package:adv_flutter_ch_3/Budget%20App/screens/home/all%20categories%20page/all_categories_page.dart';
@@ -22,6 +24,14 @@ class BudgetApp extends StatelessWidget {
         GetPage(
           name: '/',
           page: () => const FlashScreen(),
+        ),
+        GetPage(
+          name: '/SignUpScreen',
+          page: () => const SignUpScreen(),
+        ),
+        GetPage(
+          name: '/LoginPage',
+          page: () => const LoginPage(),
         ),
         GetPage(
           name: '/BottomNavigationBarPage',

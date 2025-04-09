@@ -13,17 +13,13 @@ class FlashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Timer.periodic(
       const Duration(seconds: 3),
-      (timer) {
-        if (profileController.isCheck == true) {
-          profileController.registerUser(
-            name: profileController.txtName.text,
-            phone: profileController.txtPhone.text,
-            email: profileController.txtEmail.text,
-          );
-          profileController.fetchUserData();
-
+      (timer) async {
+        await profileController.fetchUserData();
+        if (profileController.userList.isEmpty) {
+          Navigator.of(context).pushReplacementNamed("/SignUpScreen");
+        } else if (profileController.userList[0].isCheck == 1) {
+          Navigator.of(context).pushReplacementNamed("/LoginPage");
         }
-        Navigator.of(context).pushReplacementNamed('/BottomNavigationBarPage');
       },
     );
     return Scaffold(

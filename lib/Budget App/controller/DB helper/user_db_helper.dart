@@ -1,4 +1,3 @@
-
 import 'dart:typed_data';
 
 import 'package:adv_flutter_ch_3/Budget%20App/controller/DB%20helper/db_helper.dart';
@@ -13,10 +12,12 @@ class UserDbHelper {
   Future<Database?> get database async =>
       _database ?? await DbHelper.dbHelper.createDatabase();
 
-  Future<void> insertUser(String name, phone, email) async {
+  Future<void> insertUser(
+      String name, phone, email, password, int isCheck) async {
     Database? db = await database;
-    String query = "INSERT INTO user(name,phone,email) VALUES(?,?,?)";
-    List args = [name, phone, email];
+    String query =
+        "INSERT INTO user(name,phone,email,password,isCheck) VALUES(?,?,?,?,?)";
+    List args = [name, phone, email, password, isCheck];
     await db!.rawQuery(query, args);
   }
 

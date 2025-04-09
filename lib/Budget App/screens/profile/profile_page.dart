@@ -32,7 +32,7 @@ class ProfilePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              profileController.isCheck = false;
+              // profileController.isCheck = false;
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(

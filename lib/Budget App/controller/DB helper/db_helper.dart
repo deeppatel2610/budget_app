@@ -33,7 +33,9 @@ class DbHelper {
         name TEXT,
         phone TEXT,
         email TEXT,
-        img BLOB      
+        password TEXT,
+        isCheck INTEGER,
+        img BLOB
         )''';
 
         await db.execute(query);

@@ -8,10 +8,11 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ProfileController extends GetxController {
-  var txtPhone = TextEditingController(text: "6353614861");
-  var txtEmail = TextEditingController(text: "deeppatel100267@gmail.com");
-  var txtName = TextEditingController(text: "Deep Patel");
-  bool isCheck = true;
+  var txtPhone = TextEditingController();
+  var txtEmail = TextEditingController();
+  var txtName = TextEditingController();
+  var txtPassword = TextEditingController();
+  int isCheck = 0;
   RxBool isImage = true.obs;
   Uint8List? image;
   RxList<UserModel> userList = <UserModel>[].obs;
@@ -49,12 +50,13 @@ class ProfileController extends GetxController {
     fetchUserData();
   }
 
-  void registerUser({
-    required String name,
-    required String phone,
-    required String email,
-  }) {
-    UserDbHelper.userDbHelper.insertUser(name, phone, email);
+  void registerUser(
+      {required String name,
+      required String phone,
+      required String email,
+      required String password,
+      required int isCheck}) {
+    UserDbHelper.userDbHelper.insertUser(name, phone, email, password, isCheck);
   }
 
   void updateUser({
