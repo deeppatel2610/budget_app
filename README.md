@@ -1,5 +1,5 @@
 
-```markdown
+
 # Budget App 💰
 
 The **Budget App** is a Flutter-based application designed to help users manage their personal finances effectively. It provides an easy way to track expenses, set budgets, and visualize spending patterns, all through a user-friendly interface.
