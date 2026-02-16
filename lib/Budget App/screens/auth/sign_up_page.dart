@@ -1,6 +1,5 @@
 import 'package:adv_flutter_ch_3/Budget%20App/screens/auth/component/custom_text_field.dart';
 import 'package:adv_flutter_ch_3/Budget%20App/screens/auth/login_page.dart';
-import 'package:adv_flutter_ch_3/api%20app/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
